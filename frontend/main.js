@@ -28,9 +28,16 @@ function listarTarefas() {
                     <p>Data: ${tarefa.dataTermino}</p>
                     <p>Categoria: ${tarefa.categoria}</p>
                     <p>Status: ${tarefa.status}</p>
+                    <button onclick="excluirTarefa(${i})">excluir</button>
                 </div>
             `;
         }
+}
+
+function excluirTarefa(posicao) {
+    registroTarefas.splice(posicao, 1);
+    localStorage.setItem('tarefas', JSON.stringify(registroTarefas));
+    listarTarefas();
 }
 
 function limparFormulario() {
