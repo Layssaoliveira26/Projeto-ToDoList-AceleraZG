@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto To Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="carregarEdicao()">
+    <div class="menu">
+        <a href="index.html">Cadastro</a>
+        <a href="listaTarefas.html">Listagem Tarefas</a>
+    </div>
     <div class="main-area">
-        <div class="menu">
-            <a href="index.html">Cadastro</a>
-            <a href="lista_tarefas.html">Listagem Tarefas</a>
-        </div>
         <div class="form-area">
             <form onsubmit="salvarTarefa(event)">
                 <h3>Cadastro de Tarefa</h3>
